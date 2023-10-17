@@ -7,14 +7,14 @@ class Chronometer {
 
   start(printTimeCallback) {
     // ... your code goes here
-    // if(printTimeCallback)
-    // {
+  
       this.intervalId = setInterval(()=>{
         this.currentTime++;
         if(printTimeCallback)
+        {
           printTimeCallback();
+        }
       },1000)
-    // }
   }
 
   getMinutes() {
@@ -33,7 +33,7 @@ class Chronometer {
     // ... your code goes here
     let twoDigitStr = ""
     if(value < 10)
-      twoDigitStr = "0" + value.toString();
+      twoDigitStr = "0" + value;
     else
       twoDigitStr = value.toString();
     return twoDigitStr
